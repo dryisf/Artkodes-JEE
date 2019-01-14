@@ -1,17 +1,20 @@
-package metier;
+package model;
 
 public class Photo {
-    private int id;
+    private static int id = 0;
     private String name;
     private Category category;
     private String path;
+    
+    public Photo(String name, Category category, String path) {
+        this.setName(name);
+        this.setCategory(category);
+        this.setPath(path);
+        id++;
+    }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {

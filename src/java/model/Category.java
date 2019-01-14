@@ -1,18 +1,20 @@
 
-package metier;
+package model;
 
 
 public class Category {
-    private int id;
+    private static int id = 0;
     private String name;
     private String description;
+    
+    public Category (String name, String description) {
+        this.setName(name);
+        this.setDescription(description);
+        id++;
+    }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
