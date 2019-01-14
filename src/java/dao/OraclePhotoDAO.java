@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.sql.DataSource;
+import metier.Category;
+import metier.Photo;
 
 public class OraclePhotoDAO{
     private DataSource ds;
@@ -29,7 +31,7 @@ public class OraclePhotoDAO{
             stmt = connexionBD.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM PHOTO");
             while (rs.next()) {
-                Photo photo = new Photo(rs.getInt("..."), rs.getInt("..."));
+                Photo photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), new Category(1, "", ""), rs.getString("PHOTOPATH"));/*Méthode getCategorieByName(rs.getString("PHOTOCAT"))*/
                 photoList.add(photo);
             }
             rs.close();
