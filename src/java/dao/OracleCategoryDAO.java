@@ -11,6 +11,20 @@ import java.util.logging.Logger;
 import javax.sql.DataSource;
 import model.Category;
 
+/*
+    Comment utiliser ce DAO ?
+
+    OracleCategoryDAO bd = new OracleCategoryDAO() ;
+    OracleDataSource ods = OracleDataSourceDAO.getOracleDataSourceDAO();
+    bd.setDataSource(ods);
+    bd.setConnection(ods.getConnection());
+        
+    List<Category> catList = bd.getAllCategories();
+    List<Category> catList = bd.getCategoryById(photo.getCategory().getCatId());
+    Category = new Category(id, nom, description);
+    bd.createCategory(Category category);
+    bd.deleteCategory(category.getCatId());
+*/
 public class OracleCategoryDAO{
     private DataSource ds;
     private Connection connexionBD;
