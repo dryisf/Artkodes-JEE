@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.sql.DataSource;
-import metier.Category;
-import metier.Photo;
+import model.Category;
+import model.Photo;
 
 public class OraclePhotoDAO{
     private DataSource ds;
