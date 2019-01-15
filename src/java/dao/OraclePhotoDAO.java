@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.sql.DataSource;
+import model.Category;
 import model.Photo;
 import oracle.jdbc.pool.OracleDataSource;
 
@@ -46,7 +47,7 @@ public class OraclePhotoDAO{
         return photoList;
     }
     
-    public List<Photo> getPhotosByCategory(int catId) throws SQLException{
+    public List<Photo> getPhotosByCategory(Category category) throws SQLException{
         Statement stmt;
         List<Photo> photoList = null;
         OracleCategoryDAO bd = new OracleCategoryDAO() ;
@@ -55,7 +56,7 @@ public class OraclePhotoDAO{
         bd.setConnection(ods.getConnection());
         try {
             stmt = connexionBD.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM PHOTO WHERE PHOTOCAT = "+catId+" ORDER BY PHOTOID");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM PHOTO WHERE PHOTOCAT = "+category.getCatId()+" ORDER BY PHOTOID");
             while (rs.next()) {
                 Photo photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), bd.getCategorybyId(rs.getInt("PHOTOCAT")), rs.getString("PHOTOPATH"));
                 photoList.add(photo);
