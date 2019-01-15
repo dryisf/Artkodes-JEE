@@ -1,20 +1,20 @@
 package model;
 
 public class Photo {
-    private static int id = 0;
+    private int photoId;
     private String name;
     private Category category;
     private String path;
     
-    public Photo(String name, Category category, String path) {
+    public Photo(int photoId, String name, Category category, String path) {
         this.setName(name);
         this.setCategory(category);
         this.setPath(path);
-        id++;
+        this.photoId=photoId;
     }
 
-    public int getId() {
-        return id;
+    public int getPhotoId() {
+        return photoId;
     }
 
     public String getName() {
