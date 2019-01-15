@@ -1,20 +1,19 @@
-
 package model;
 
 
 public class Category {
-    private static int id = 0;
+    private int catId;
     private String name;
     private String description;
     
-    public Category (String name, String description) {
-        this.setName(name);
-        this.setDescription(description);
-        id++;
+    public Category (int catId, String name, String description) {
+        this.name=name;
+        this.description=description;
+        this.catId=catId;
     }
 
-    public int getId() {
-        return id;
+    public int getCatId() {
+        return catId;
     }
 
     public String getName() {
