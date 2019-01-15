@@ -10,8 +10,8 @@ package model;
  * @author daryl
  */
 public class Admin {
-    private String username;
-    private String password;
+    private String username = "artkodes";
+    private String password = "bizbiz";
 
     public String getUsername() {
         return username;

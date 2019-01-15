@@ -5,9 +5,6 @@
  */
 package controller;
 
-import controller.actions.Action;
-import controller.actions.CalculAction;
-import controller.actions.IdentiteAction;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -16,7 +13,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import metier.logique.Calculatrice;
+import javax.servlet.http.HttpSession;
+import model.Admin;
 
 /**
  *
@@ -36,33 +34,23 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
         
-        String action = request.getParameter("action");
-        RequestDispatcher rd;
-        Action a;
-        String vue;
+
         
-        switch(action){
-            case "identite" :
-                a = new IdentiteAction();
-                vue = a.execute(request);
+        if (username.equals("artkodes")){
+            if (password.equals("bizbiz")){
+                HttpSession session = request.getSession();
 
-                rd = request.getRequestDispatcher(vue);
-                break;
-            
-            case "calcul" :
-                a = new CalculAction();
-                vue = a.execute(request);
-
-                rd = request.getRequestDispatcher(vue);
-                break;
+                session.setAttribute("username", username);
+                session.setAttribute("password", password);
                 
-            default :
-                rd = request.getRequestDispatcher("index.html");
+                RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+                rd.forward(request, response);
+            }
             
         }
-        
-        rd.forward(request, response);
         
     }
 
