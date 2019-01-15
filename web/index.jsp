@@ -11,7 +11,19 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Artkodes</title>
     </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+    
+        <div class="container">
+            
+            <% for(int j = 0; j<2; j++){ %>
+            <div class="row">
+                <% for(int i = 0; i<3; i++){ %>
+                <div class="col">
+                    <img src="https://via.placeholder.com/350"/>
+                </div>
+                <% } %>
+            </div>
+            <% } %>
+            
+        </div>
+    
 </html>
