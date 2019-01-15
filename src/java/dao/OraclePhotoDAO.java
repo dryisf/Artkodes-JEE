@@ -13,6 +13,20 @@ import model.Category;
 import model.Photo;
 import oracle.jdbc.pool.OracleDataSource;
 
+/*
+    Comment utiliser ce DAO ?
+
+    OraclePhotoDAO bd = new OraclePhotoDAO() ;
+    OracleDataSource ods = OracleDataSourceDAO.getOracleDataSourceDAO();
+    bd.setDataSource(ods);
+    bd.setConnection(ods.getConnection());
+        
+    List<Photo> photoList = bd.getAllPhotos();
+    List<Photo> photoList = bd.getPhotosByCategory([une classe Category]);
+    Photo photo = new Photo(id, nom, [une classe Category], path);
+    bd.createPhoto(photo);
+    bd.deletePhoto(photo.getPhotoId());
+*/
 public class OraclePhotoDAO{
     private DataSource ds;
     private Connection connexionBD;
