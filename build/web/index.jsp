@@ -12,10 +12,17 @@
         <title>Artkodes</title>
     </head>
     
+    <% if (session.getAttribute("alert") != null) { %>
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <p class="mb-0"><%= session.getAttribute("alert") %></p>
+        </div>
+    <% } %>
+    
         <div class="container">
             
             <% for(int j = 0; j<2; j++){ %>
-            <div class="row">
+            <div class="row justify-content-around">
                 <% for(int i = 0; i<3; i++){ %>
                 <div class="col">
                     <img src="https://via.placeholder.com/350"/>

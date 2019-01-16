@@ -15,7 +15,7 @@
     <body>
         <h1>Connexion</h1>
         
-        <form action="loginServlet" method="POST">
+        <form action="login" method="POST">
             <fieldset>
                 <div class="form-group">
                     <label for="username">Nom d'utilisateur</label>

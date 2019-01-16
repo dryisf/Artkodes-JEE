@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css"/>
+        <link rel=stylesheet type="text/css" href="main.css" />
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -20,8 +21,8 @@
             <div class="collapse navbar-collapse" id="navbarColor02">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <% if (request.getSession().getAttribute("username") != null) { %>
-                    <a class="nav-link" href="login.jsp" data-ytta-id="-">Déconnexion</a>
+                    <% if (session.getAttribute("username") != null) { %>
+                    <a class="nav-link" href="logout" data-ytta-id="-">Déconnexion</a>
                     <% } else { %>
                     <a class="nav-link" href="login.jsp" data-ytta-id="-">Connexion</a>
                     <% } %>
