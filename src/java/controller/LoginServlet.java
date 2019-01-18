@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 
                 session.setAttribute("username", username);
                 session.setAttribute("password", password);
-                session.setAttribute("alert", "Vous êtes connecté");
+                request.setAttribute("alert", "Vous êtes connecté");
                 
                 RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
                 rd.forward(request, response);

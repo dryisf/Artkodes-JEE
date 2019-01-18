@@ -12,10 +12,10 @@
         <title>Artkodes</title>
     </head>
     
-    <% if (session.getAttribute("alert") != null) { %>
+    <% if (request.getAttribute("alert") != null) { %>
         <div class="alert alert-dismissible alert-success">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <p class="mb-0"><%= session.getAttribute("alert") %></p>
+            <p class="mb-0"><%= request.getAttribute("alert") %></p>
         </div>
     <% } %>
     
