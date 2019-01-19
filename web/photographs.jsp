@@ -15,7 +15,9 @@
         <div class="container" style="max-width:1500px">
             <h1><%= (String)request.getAttribute("cat") %></h1>
             
-            <%int photoCount=0; for(int i=0; i<(((int)request.getAttribute("photoNb"))/3)+1; i++){%>
+            <%int photoCount=0;
+            if((int)request.getAttribute("photoNb")!=0){
+            for(int i=0; i<(((int)request.getAttribute("photoNb"))/3)+1; i++){%>
                 <div class="row justify-content-around">
                 <%for(int j=0; j<3; j++){%>
                     <div class="col-lg-4">
@@ -23,9 +25,12 @@
                     </div>
                 <%photoCount++; if(photoCount==((int)request.getAttribute("photoNb"))){break;} }%>
                 </div>
-            <%}%>
+            <%}}%>
         </div>
-            
-    <%@include file="footer.jsp" %>
     
+    <%if((int)request.getAttribute("photoNb")<4){%>       
+        <%@include file="footer2.jsp" %>
+    <%}else{%>
+        <%@include file="footer.jsp" %>
+    <%}%>
 </html>

@@ -60,8 +60,12 @@ public class OracleCategoryDAO{
         Category cat = null;
         try {
             stmt = connexionBD.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM CATEGORY");
-            cat = new Category(rs.getInt("CATID"), rs.getString("CATNAME"), rs.getString("CATDESC"));
+            ResultSet rs = stmt.executeQuery("SELECT * FROM CATEGORY WHERE CATID="+catId);
+            if(rs.next() == false){
+                cat = new Category(-1, "Catégorie inconnue", "Catégorie inconnue");
+            }else{
+                cat = new Category(rs.getInt("CATID"), rs.getString("CATNAME"), rs.getString("CATDESC"));
+            }
             rs.close();
             stmt.close();
         } catch (SQLException ex) {
