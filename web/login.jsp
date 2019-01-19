@@ -37,6 +37,7 @@
                     </fieldset>
                 </form>
             </div>
-        </main>
+        </main> 
     </body>
+    <%@include file="footer2.jsp" %>
 </html>

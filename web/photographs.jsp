@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : 14 janv. 2019, 18:17:13
-    Author     : daryl
+    Document   : photo
+    Created on : 19 janv. 2019, 15:51:09
+    Author     : Michel
 --%>
 <%@include file="header.jsp"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,6 +15,7 @@
     <%@include file="alert.jsp" %>
     
         <div class="container" style="max-width:1500px">
+            <h1><%= request.getAttribute("cat") %></h1>
             
             <div class="row justify-content-around">
                 <div class="col-lg-4">
@@ -41,7 +42,7 @@
             </div>
             
         </div>
-    
+            
     <%@include file="footer.jsp" %>
     
 </html>

@@ -11,9 +11,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css"/>
         <link rel=stylesheet type="text/css" href="main.css" />
+        <link rel="icon" href="./assets/images/artkodesicon.png">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-bottom: none">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border: none">
             <a class="navbar-brand" href="index.jsp" data-ytta-id="-">Artkodes</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
