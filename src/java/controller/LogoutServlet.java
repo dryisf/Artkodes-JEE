@@ -36,7 +36,9 @@ public class LogoutServlet extends HttpServlet {
         
         HttpSession session = request.getSession();
         session.invalidate();
-            
+        
+        request.setAttribute("alertSuccess", "Vous êtes déconnecté");
+        
         RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
         rd.forward(request, response);
         

@@ -12,6 +12,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Connexion</title>
     </head>
+    
+    <%@include file="alert.jsp" %>
+    
     <body>
         <main role="main" class="container">
             <div class="col-lg-8 offset-lg-2">

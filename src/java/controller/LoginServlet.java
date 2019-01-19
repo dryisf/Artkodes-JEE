@@ -45,14 +45,22 @@ public class LoginServlet extends HttpServlet {
 
                 session.setAttribute("username", username);
                 session.setAttribute("password", password);
-                request.setAttribute("alert", "Vous êtes connecté");
+                request.setAttribute("alertSuccess", "Vous êtes connecté");
                 
                 RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
                 rd.forward(request, response);
+            }else{
+                request.setAttribute("alertFail", "Mot de passe incorrect");
+                
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.forward(request, response);
             }
-            
+        }else{
+            request.setAttribute("alertFail", "Nom d'utilisateur incorrect");
+                
+            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+            rd.forward(request, response);
         }
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
