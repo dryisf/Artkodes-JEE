@@ -17,25 +17,25 @@
         <div class="container" style="max-width:1500px">
             
             <div class="row justify-content-around">
-                <div class="col-lg-4">
+                <div class="col-lg-4" style="margin-bottom:10px">
                     <a href="photographs?catid=1"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" style="margin-bottom:10px">
                     <a href="photographs?catid=2"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" style="margin-bottom:10px">
                     <a href="photographs?catid=3"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
             </div>
             
             <div class="row justify-content-around">
-                <div class="col-lg-4">
+                <div class="col-lg-4" style="margin-bottom:10px">
                     <a href="photographs?catid=4"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" style="margin-bottom:10px">
                     <a href="photographs?catid=5"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" style="margin-bottom:10px">
                     <a href="photographs?catid=6"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
             </div>

@@ -20,7 +20,7 @@
             for(int i=0; i<(((int)request.getAttribute("photoNb"))/3)+1; i++){%>
                 <div class="row justify-content-around">
                 <%for(int j=0; j<3; j++){%>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" style="margin-bottom:10px">
                         <img src="https://via.placeholder.com/2880x1800" style="width:100%"/>
                     </div>
                 <%photoCount++; if(photoCount==((int)request.getAttribute("photoNb"))){break;} }%>

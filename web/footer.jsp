@@ -6,9 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <footer id="footer">
-    <div class="row">
+    <div class="row" style="width:101%">
       <div class="col-lg-6 offset-lg-3">
-            <ul class="list-unstyled" style="margin-top: 3%;">
+            <ul class="list-unstyled" style="margin-top: 2.5%;">
               <li style="margin-right: 10px; display: inline-block"><a href="https://www.instagram.com/artkodes/" target="_blank" style="color: #999">artkodes Instagram</a></li>
               <li style="margin-right: 10px; display: inline-block"><a href="https://www.instagram.com/tchointeur/" target="_blank" style="color: #999">tchointeur Instagram</a></li>
               <li style="margin-right: 10px; display: inline-block"><a href="https://github.com/dryisf/Artkodes-JEE" target="_blank" style="color: #999">GitHub</a></li>
