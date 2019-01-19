@@ -14,13 +14,13 @@
     
     <%@include file="alert.jsp" %>
     
-        <div class="container">
+        <div class="container" style="max-width:1500px">
             
             <% for(int j = 0; j<2; j++){ %>
             <div class="row justify-content-around">
                 <% for(int i = 0; i<3; i++){ %>
-                <div class="col">
-                    <img src="https://via.placeholder.com/350"/>
+                <div class="col-lg-4">
+                    <img src="https://via.placeholder.com/2880x1800" style="width:100%"/>
                 </div>
                 <% } %>
             </div>
