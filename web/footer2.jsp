@@ -13,9 +13,8 @@
               <li style="margin-right: 10px; display: inline-block"><a href="https://www.instagram.com/tchointeur/" target="_blank" style="color: #999">tchointeur Instagram</a></li>
               <li style="margin-right: 10px; display: inline-block"><a href="https://github.com/dryisf/Artkodes-JEE" target="_blank" style="color: #999">GitHub</a></li>
               <li style="margin-right: 10px; display: inline-block">-</li>
-              <li style="display: inline-block">Réalisé par BIZIMANA Zacharie, ISSOUFI Daryl et DINH Son-Michel.</li>
+              <li style="display: inline-block">Réalisé par BIZIMANA Zacharie, ISSOUFI Daryl et DINH Son-Michel</li>
             </ul>
       </div>
     </div>
-
 </footer>

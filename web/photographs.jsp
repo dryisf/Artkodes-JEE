@@ -12,35 +12,18 @@
         <title>Artkodes</title>
     </head>
     
-    <%@include file="alert.jsp" %>
-    
         <div class="container" style="max-width:1500px">
-            <h1><%= request.getAttribute("cat") %></h1>
+            <h1><%= (String)request.getAttribute("cat") %></h1>
             
-            <div class="row justify-content-around">
-                <div class="col-lg-4">
-                    <a href="#"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
+            <%int photoCount=0; for(int i=0; i<(((int)request.getAttribute("photoNb"))/3)+1; i++){%>
+                <div class="row justify-content-around">
+                <%for(int j=0; j<3; j++){%>
+                    <div class="col-lg-4">
+                        <img src="https://via.placeholder.com/2880x1800" style="width:100%"/>
+                    </div>
+                <%photoCount++; if(photoCount==((int)request.getAttribute("photoNb"))){break;} }%>
                 </div>
-                <div class="col-lg-4">
-                    <a href="#"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
-                </div>
-                <div class="col-lg-4">
-                    <a href="#"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
-                </div>
-            </div>
-            
-            <div class="row justify-content-around">
-                <div class="col-lg-4">
-                    <a href="#"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
-                </div>
-                <div class="col-lg-4">
-                    <a href="#"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
-                </div>
-                <div class="col-lg-4">
-                    <a href="#"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
-                </div>
-            </div>
-            
+            <%}%>
         </div>
             
     <%@include file="footer.jsp" %>
