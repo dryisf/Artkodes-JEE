@@ -18,25 +18,25 @@
             
             <div class="row justify-content-around">
                 <div class="col-lg-4">
-                    <a href="photographs?cat=..."><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
+                    <a href="photographs?cat=category1"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
                 <div class="col-lg-4">
-                    <a href="photographs?cat=..."><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
+                    <a href="photographs?cat=category2"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
                 <div class="col-lg-4">
-                    <a href="photographs?cat=..."><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
+                    <a href="photographs?cat=category3"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
             </div>
             
             <div class="row justify-content-around">
                 <div class="col-lg-4">
-                    <a href="photographs?cat=..."><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
+                    <a href="photographs?cat=category4"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
                 <div class="col-lg-4">
-                    <a href="photographs?cat=..."><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
+                    <a href="photographs?cat=category5"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
                 <div class="col-lg-4">
-                    <a href="photographs?cat=..."><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
+                    <a href="photographs?cat=category6"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
             </div>
             

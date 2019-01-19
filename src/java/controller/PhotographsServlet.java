@@ -32,7 +32,7 @@ public class PhotographsServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setAttribute("photoNb", 72);
+        request.setAttribute("photoNb", 80);
         request.setAttribute("cat", (String)request.getParameter("cat"));
         RequestDispatcher rd = request.getRequestDispatcher("photographs.jsp");
         rd.forward(request, response);
