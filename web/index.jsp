@@ -36,7 +36,7 @@
                     <a href="photographs?catid=5"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
                 <div class="col-lg-4" style="margin-bottom:10px">
-                    <a href="photographs?catid=6"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
+                    <a href="contact.jsp"><img src="https://via.placeholder.com/2880x1800" style="width:100%"/></a>
                 </div>
             </div>
             
