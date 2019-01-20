@@ -9,9 +9,9 @@
     <div class="row">
       <div class="col-lg-9 offset-lg-3" style="position: fixed; width: 100% ;bottom: 0; left: 0">
             <ul class="list-unstyled">
-              <li style="margin-right: 10px; display: inline-block"><a href="https://www.instagram.com/artkodes/" target="_blank" style="color: #999">artkodes Instagram</a></li>
-              <li style="margin-right: 10px; display: inline-block"><a href="https://www.instagram.com/tchointeur/" target="_blank" style="color: #999">tchointeur Instagram</a></li>
-              <li style="margin-right: 10px; display: inline-block"><a href="https://github.com/dryisf/Artkodes-JEE" target="_blank" style="color: #999">GitHub</a></li>
+              <li style="margin-right: 10px; display: inline-block"><a href="https://www.instagram.com/artkodes/" target="_blank" style="color: #999"><i class="fab fa-instagram"></i> artkodes</a></li>
+              <li style="margin-right: 10px; display: inline-block"><a href="https://www.instagram.com/tchointeur/" target="_blank" style="color: #999"><i class="fab fa-instagram"></i> tchointeur</a></li>
+              <li style="margin-right: 10px; display: inline-block"><a href="https://github.com/dryisf/Artkodes-JEE" target="_blank" style="color: #999"><i class="fab fa-github"></i></a></li>
               <li style="margin-right: 10px; display: inline-block">-</li>
               <li style="display: inline-block">Réalisé par BIZIMANA Zacharie, ISSOUFI Daryl et DINH Son-Michel</li>
             </ul>
