@@ -44,7 +44,12 @@ public class OracleCategoryDAO{
             stmt = connexionBD.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM CATEGORY ORDER BY CATID");
             while (rs.next()) {
-                Category cat = new Category(rs.getInt("CATID"), rs.getString("CATNAME"), rs.getString("CATDESC"));
+                Category cat = null;
+                if(rs.next() == false){
+                    cat = new Category(-1, "Catégorie inconnue", "Catégorie inconnue");
+                }else{
+                    cat = new Category(rs.getInt("CATID"), rs.getString("CATNAME"), rs.getString("CATDESC"));
+                }
                 catList.add(cat);
             }
             rs.close();

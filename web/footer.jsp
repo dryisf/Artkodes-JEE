@@ -11,7 +11,7 @@
             <ul class="list-unstyled" style="margin-top: 2.5%; text-align: center">
               <li style="margin-right: 8px; display: inline-block"><a href="https://www.instagram.com/artkodes/" target="_blank" style="color: #999"><i class="fab fa-instagram"></i> artkodes</a></li>
               <li style="margin-right: 8px; display: inline-block"><a href="https://www.instagram.com/tchointeur/" target="_blank" style="color: #999"><i class="fab fa-instagram"></i> tchointeur</a></li>
-              <li style="margin-right: 8px; display: inline-block"><a href="https://github.com/dryisf/Artkodes-JEE" target="_blank" style="color: #999"><i class="fab fa-github"></i></a></li>
+              <li style="margin-right: 8px; display: inline-block"><a href="https://github.com/dryisf/Artkodes-JEE" target="_blank" style="color: #999"><i class="fab fa-github"></i> GitHub</a></li>
               <li style="margin-right: 8px; display: inline-block">-</li>
               <li style="display: inline-block">Réalisé par BIZIMANA Zacharie, ISSOUFI Daryl et DINH Son-Michel</li>
             </ul>

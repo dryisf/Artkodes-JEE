@@ -49,7 +49,12 @@ public class OraclePhotoDAO{
             stmt = connexionBD.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM PHOTO ORDER BY PHOTOID");
             while (rs.next()) {
-                Photo photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), bd.getCategorybyId(rs.getInt("PHOTOCAT")), rs.getString("PHOTOPATH"));
+                Photo photo = null;
+                if(rs.next() == false){
+                    photo = new Photo(-1, "Photo inconnue", bd.getCategorybyId(-1), "");
+                }else{
+                    photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), bd.getCategorybyId(rs.getInt("PHOTOCAT")), rs.getString("PHOTOPATH"));
+                }
                 photoList.add(photo);
             }
             rs.close();
@@ -71,7 +76,12 @@ public class OraclePhotoDAO{
             stmt = connexionBD.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM PHOTO WHERE PHOTOCAT = "+catid+" ORDER BY PHOTOID");
             while (rs.next()) {
-                Photo photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), bd.getCategorybyId(rs.getInt("PHOTOCAT")), rs.getString("PHOTOPATH"));
+                Photo photo = null;
+                if(rs.next() == false){
+                    photo = new Photo(-1, "Photo inconnue", bd.getCategorybyId(catid), "null");
+                }else{
+                    photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), bd.getCategorybyId(rs.getInt("PHOTOCAT")), rs.getString("PHOTOPATH"));
+                }
                 photoList.add(photo);
             }
             rs.close();

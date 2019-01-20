@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/IUT/Semestre%203/Java/Projets%20Netbeans/Artkodes/src/java/dao/OracleDataSourceDAO.java</file>
-            <file>file:/D:/IUT/Semestre%203/Java/Projets%20Netbeans/Artkodes/src/java/dao/OraclePhotoDAO.java</file>
-            <file>file:/D:/IUT/Semestre%203/Java/Projets%20Netbeans/Artkodes/src/java/dao/OracleCategoryDAO.java</file>
-            <file>file:/D:/IUT/Semestre%203/Java/Projets%20Netbeans/Artkodes/src/java/metier/Ajout.java</file>
-            <file>file:/D:/IUT/Semestre%203/Java/Projets%20Netbeans/Artkodes/src/java/model/Photo.java</file>
+            <file>file:/C:/Users/Michel/Documents/GitHub/Artkodes/src/java/dao/OraclePhotoDAO.java</file>
+            <file>file:/C:/Users/Michel/Documents/GitHub/Artkodes/web/contact.jsp</file>
+            <file>file:/C:/Users/Michel/Documents/GitHub/Artkodes/web/photographs.jsp</file>
+            <file>file:/C:/Users/Michel/Documents/GitHub/Artkodes/web/index.jsp</file>
         </group>
     </open-files>
 </project-private>
