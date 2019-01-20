@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Connexion</title>
+        <title>A R T K O D E S - Connexion</title>
     </head>
     
     <%@include file="alert.jsp" %>
