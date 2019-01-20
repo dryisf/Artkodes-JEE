@@ -27,7 +27,7 @@ public class Ajout {
         bd0.setDataSource(ods0);
         bd0.setConnection(ods0.getConnection());
         
-        Photo ph = new Photo(1, "1", bd0.getCategorybyId(1), "../../../web/assets/photos/musee/musee (1).jpg");
+        Photo ph = new Photo(1, "1", bd0.getCategorybyId(1), "./assets/photos/musee/musee(1).jpg");
         bd.createPhoto(ph);
 //        int fin = 52;
 //        Photo[] ph = new Photo[fin-1];
