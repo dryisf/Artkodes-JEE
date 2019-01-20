@@ -21,7 +21,7 @@
                 <div class="row justify-content-around">
                 <%for(int j=0; j<3; j++){%>
                     <div class="col-lg-4" style="margin-bottom:10px">
-                        <img src="https://via.placeholder.com/2880x1800" style="width:100%"/>
+                        <img src="https://via.placeholder.com/4000x6000" style="width:100%"/>
                     </div>
                 <%photoCount++; if(photoCount==((int)request.getAttribute("photoNb"))){break;} }%>
                 </div>
