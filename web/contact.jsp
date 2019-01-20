@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Contact</title>
+        <title>A R T K O D E S - Contact</title>
     </head>
     
     <%@include file="alert.jsp" %>

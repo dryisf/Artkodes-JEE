@@ -1,3 +1,11 @@
 .container, .container .row {
     margin-top: 2%;
 }
+
+html {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
