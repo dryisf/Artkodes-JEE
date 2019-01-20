@@ -32,6 +32,11 @@ body {
   opacity: 1;
 }
 
+.containerH:hover img {
+  opacity: 0.5;
+  transition: .5s ease;
+}
+
 .text {
   color: white;
   font-size: 240%;

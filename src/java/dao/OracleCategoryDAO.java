@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -39,17 +40,12 @@ public class OracleCategoryDAO{
     
     public List<Category> getAllCategories() {
         Statement stmt;
-        List<Category> catList = null;
+        List<Category> catList = new ArrayList<Category>();
         try {
             stmt = connexionBD.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM CATEGORY ORDER BY CATID");
             while (rs.next()) {
-                Category cat = null;
-                if(rs.next() == false){
-                    cat = new Category(-1, "Catégorie inconnue", "Catégorie inconnue");
-                }else{
-                    cat = new Category(rs.getInt("CATID"), rs.getString("CATNAME"), rs.getString("CATDESC"));
-                }
+                Category cat = new Category(rs.getInt("CATID"), rs.getString("CATNAME"), rs.getString("CATDESC"));
                 catList.add(cat);
             }
             rs.close();

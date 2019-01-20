@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -40,7 +41,7 @@ public class OraclePhotoDAO{
     
     public List<Photo> getAllPhotos() throws SQLException {
         Statement stmt;
-        List<Photo> photoList = null;
+        List<Photo> photoList = new ArrayList<Photo>();
         OracleCategoryDAO bd = new OracleCategoryDAO() ;
         OracleDataSource ods = OracleDataSourceDAO.getOracleDataSourceDAO();
         bd.setDataSource(ods);
@@ -49,12 +50,7 @@ public class OraclePhotoDAO{
             stmt = connexionBD.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM PHOTO ORDER BY PHOTOID");
             while (rs.next()) {
-                Photo photo = null;
-                if(rs.next() == false){
-                    photo = new Photo(-1, "Photo inconnue", bd.getCategorybyId(-1), "");
-                }else{
-                    photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), bd.getCategorybyId(rs.getInt("PHOTOCAT")), rs.getString("PHOTOPATH"));
-                }
+                Photo photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), bd.getCategorybyId(rs.getInt("PHOTOCAT")), rs.getString("PHOTOPATH"));
                 photoList.add(photo);
             }
             rs.close();
@@ -67,7 +63,7 @@ public class OraclePhotoDAO{
     
     public List<Photo> getPhotosByCategory(int catid) throws SQLException{
         Statement stmt;
-        List<Photo> photoList = null;
+        List<Photo> photoList = new ArrayList<Photo>();
         OracleCategoryDAO bd = new OracleCategoryDAO() ;
         OracleDataSource ods = OracleDataSourceDAO.getOracleDataSourceDAO();
         bd.setDataSource(ods);
@@ -76,12 +72,7 @@ public class OraclePhotoDAO{
             stmt = connexionBD.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM PHOTO WHERE PHOTOCAT = "+catid+" ORDER BY PHOTOID");
             while (rs.next()) {
-                Photo photo = null;
-                if(rs.next() == false){
-                    photo = new Photo(-1, "Photo inconnue", bd.getCategorybyId(catid), "null");
-                }else{
-                    photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), bd.getCategorybyId(rs.getInt("PHOTOCAT")), rs.getString("PHOTOPATH"));
-                }
+                Photo photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), bd.getCategorybyId(rs.getInt("PHOTOCAT")), rs.getString("PHOTOPATH"));
                 photoList.add(photo);
             }
             rs.close();
@@ -90,6 +81,23 @@ public class OraclePhotoDAO{
             Logger.getLogger(OraclePhotoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return photoList;
+    }
+    
+    public int getPhotoMaxId() throws SQLException{
+        Statement stmt;
+        int res = 9999;
+        try {
+            stmt = connexionBD.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT MAX(PHOTOID) FROM PHOTO");
+            while (rs.next()) {
+                res = rs.getInt("MAX(PHOTOID)");
+            }
+            rs.close();
+            stmt.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(OraclePhotoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return res;
     }
 
     public void createPhoto(Photo photo) {

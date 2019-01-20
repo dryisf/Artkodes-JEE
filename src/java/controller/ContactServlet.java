@@ -31,15 +31,20 @@ public class ContactServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String name = request.getParameter("name");
-        String mail = request.getParameter("mail");
-        String subject = request.getParameter("subject");
-        String message = request.getParameter("message");
-        
-        request.setAttribute("alertSuccess", "Votre message a été envoyé à tchointeur avec succès");
-                
-        RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-        rd.forward(request, response);
+        if(request.getParameter("name")==null){
+            RequestDispatcher rd = request.getRequestDispatcher("contact.jsp");
+            rd.forward(request, response);
+        }else{
+            String name = request.getParameter("name");
+            String mail = request.getParameter("mail");
+            String subject = request.getParameter("subject");
+            String message = request.getParameter("message");
+
+            request.setAttribute("alertSuccess", "Votre message a été envoyé à tchointeur avec succès");
+
+            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+            rd.forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

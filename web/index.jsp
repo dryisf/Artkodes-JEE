@@ -18,25 +18,25 @@
             
             <div class="row justify-content-around">
                 <div class="col-lg-3" style="margin-bottom:10px">
-                    <a href="photographs?catid=0"  class="containerH"><img src="https://via.placeholder.com/4000x6000" style="width:100%"/><div class="overlay">
-                            <div class="text">Deception</div>
+                    <a href="photographs?catid=0"  class="containerH"><img src="./assets/images/deception.jpg" style="width:100%"/><div class="overlay">
+                            <div class="text">Déception</div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3" style="margin-bottom:10px">
-                    <a href="photographs?catid=1"  class="containerH"><img src="https://via.placeholder.com/4000x6000" style="width:100%"/><div class="overlay">
+                    <a href="photographs?catid=1"  class="containerH"><img src="./assets/images/musee.jpg" style="width:100%"/><div class="overlay">
                             <div class="text">Musée</div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3" style="margin-bottom:10px">
-                    <a href="photographs?catid=2"  class="containerH"><img src="https://via.placeholder.com/4000x6000" style="width:100%"/><div class="overlay">
+                    <a href="photographs?catid=2"  class="containerH"><img src="./assets/images/pfw.JPG" style="width:100%"/><div class="overlay">
                             <div class="text">Paris Fashion Week</div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3" style="margin-bottom:10px">
-                    <a href="photographs?catid=3"  class="containerH"><img src="https://via.placeholder.com/4000x6000" style="width:100%"/><div class="overlay">
+                    <a href="photographs?catid=3"  class="containerH"><img src="./assets/images/rebel.jpg" style="width:100%"/><div class="overlay">
                             <div class="text">Rebel</div>
                         </div>
                     </a>
@@ -45,25 +45,25 @@
             
             <div class="row justify-content-around">
                 <div class="col-lg-3" style="margin-bottom:10px">
-                    <a href="photographs?catid=4"  class="containerH"><img src="https://via.placeholder.com/4000x6000" style="width:100%"/><div class="overlay">
+                    <a href="photographs?catid=4"  class="containerH"><img src="./assets/images/tp.JPG" style="width:100%"/><div class="overlay">
                             <div class="text">The Prince</div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3" style="margin-bottom:10px">
-                    <a href="photographs?catid=5"  class="containerH"><img src="https://via.placeholder.com/4000x6000" style="width:100%"/><div class="overlay">
+                    <a href="photographs?catid=5"  class="containerH"><img src="./assets/images/tb.JPG" style="width:100%"/><div class="overlay">
                             <div class="text">Tired Boys</div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3" style="margin-bottom:10px">
-                    <a href="photographs?catid=6"  class="containerH"><img src="https://via.placeholder.com/4000x6000" style="width:100%"/><div class="overlay">
-                            <div class="text">Contact</div>
+                    <a href="addphoto"  class="containerH"><img src="./assets/images/hello.jpg" class="imgH" style="width:100%"/><div class="overlay">
+                            <div class="text">Ajouter une photo</div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3" style="margin-bottom:10px">
-                    <a href="contact.jsp" class="containerH"><img src="./assets/images/tchointeur.jpg" style="width:100%"/><div class="overlay">
+                    <a href="contact" class="containerH"><img src="./assets/images/tchointeur.jpg" style="width:100%"/><div class="overlay">
                             <div class="text">Contact</div>
                         </div>
                     </a>

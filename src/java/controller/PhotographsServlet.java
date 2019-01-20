@@ -60,6 +60,7 @@ public class PhotographsServlet extends HttpServlet {
         if(photoList==null){
             request.setAttribute("photoNb", 0);
         }else{
+            System.out.println(photoList.size());
             request.setAttribute("photoNb", photoList.size());
         }
         

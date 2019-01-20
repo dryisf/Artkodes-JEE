@@ -26,15 +26,19 @@ public class Ajout {
         bd.setConnection(ods0.getConnection());
         bd0.setDataSource(ods0);
         bd0.setConnection(ods0.getConnection());
-        
-        Photo ph = new Photo(1, "1", bd0.getCategorybyId(1), "../../../web/assets/photos/musee/musee (1).jpg");
+////        
+        Photo ph = new Photo(96, "9", bd0.getCategorybyId(5), "./assets/photos/tired-boys/tb(9).jpg");
         bd.createPhoto(ph);
-//        int fin = 52;
+        
+//        int debut = 89;
+//        int fin = 9;
 //        Photo[] ph = new Photo[fin-1];
 //        for(int i = 1; i<fin+1; i++){
-//            ph[i-1] = new Photo(i, Integer.toString(i), bd0.getCategorybyId(1), "../../../../web/assets/photos/musee ("+Integer.toString(i)+").jpg");
+//            ph[i-1] = new Photo(debut-1, Integer.toString(i), bd0.getCategorybyId(5), "./assets/photos/tired-boys/tb("+Integer.toString(i)+").jpg");
+//              bd.createPhoto(ph[i-1]);
+//              debut++;
 //        }
-        
+//        
         
     }
     
