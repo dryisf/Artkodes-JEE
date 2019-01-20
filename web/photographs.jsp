@@ -26,7 +26,7 @@
                         <%for(int j=0; j<3; j++){%>
                             <% Photo item = k.next(); %>
                             <div class="col-lg-4" style="margin-bottom:10px">
-                                <img src="<%=item.getPath()%>" style="width:100%"/>
+                                <a href="photo?photoid=<%= item.getPhotoId() %>"><img src="<%=item.getPath()%>" style="width:100%" class="imgP"/></a>
                             </div>
                         <%photoCount++; if(photoCount==((int)request.getAttribute("photoNb"))){break;} }%>
                         </div>

@@ -37,6 +37,11 @@ body {
   transition: .5s ease;
 }
 
+.imgP:hover {
+  opacity: 0.625;
+  transition: .5s ease;
+}
+
 .text {
   color: white;
   font-size: 240%;

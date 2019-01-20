@@ -83,6 +83,28 @@ public class OraclePhotoDAO{
         return photoList;
     }
     
+    public Photo getPhotosById(int id) throws SQLException{
+        Statement stmt;
+        OracleCategoryDAO bd = new OracleCategoryDAO() ;
+        OracleDataSource ods = OracleDataSourceDAO.getOracleDataSourceDAO();
+        bd.setDataSource(ods);
+        bd.setConnection(ods.getConnection());
+        Photo photo =null;
+        try {
+            stmt = connexionBD.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM PHOTO WHERE PHOTOID = "+id);
+            while (rs.next()) {
+                photo = new Photo(rs.getInt("PHOTOID"), rs.getString("PHOTONAME"), bd.getCategorybyId(rs.getInt("PHOTOCAT")), rs.getString("PHOTOPATH"));
+            }
+            rs.close();
+            stmt.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(OraclePhotoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return photo;
+    }
+    
     public int getPhotoMaxId() throws SQLException{
         Statement stmt;
         int res = 9999;
